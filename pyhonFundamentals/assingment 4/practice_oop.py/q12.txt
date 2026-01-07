@@ -1,0 +1,45 @@
+### **Practice Question — Payment System (Abstraction)**
+
+**Concept:** Abstraction using Abstract Base Classes
+
+**Problem Statement:**
+
+Create an abstract class named `Payment` that contains an abstract method called `process_payment()`.
+
+Then create the following subclasses:
+
+1. `CreditCardPayment`
+2. `UPIPayment`
+3. `CashPayment`
+
+Each subclass must implement the `process_payment()` method in a different way, based on how that payment method works.
+
+---
+
+### **Tasks to Complete:**
+
+1. Use the `abc` module to create the abstract base class `Payment`
+2. Declare `process_payment()` as an abstract method inside `Payment`
+3. Implement the `process_payment()` method in:
+
+   * `CreditCardPayment`
+   * `UPIPayment`
+   * `CashPayment`
+4. Create one object of each subclass
+5. Call the `process_payment()` method for each object
+
+---
+
+### **Rules:**
+
+* You must **not** create an object of the `Payment` class
+* All subclasses **must** implement the `process_payment()` method
+* Each subclass should show different behavior when `process_payment()` is called
+
+---
+
+### **Expected Learning Outcome:**
+
+* Understand how abstraction works in Python
+* Learn how to enforce method implementation using abstract classes
+* Practice real-world design using abstract base classes

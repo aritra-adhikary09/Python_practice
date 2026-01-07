@@ -1,0 +1,64 @@
+Below is **Problem 3 — Additional Child-Specific Methods**, rewritten **cleanly and copy-ready**, exactly in the style you asked for.
+
+---
+
+### **Problem 3 — Additional Child-Specific Methods (Inheritance)**
+
+**Concept:** Inheritance and Child-Specific Methods
+
+**Problem Statement:**
+
+Create a base class named `Vehicle` with the following:
+
+1. Attributes:
+
+   * `brand`
+   * `model`
+
+2. A constructor (`__init__`) to initialize these attributes.
+
+Then create two subclasses:
+
+---
+
+### **Car (Subclass of Vehicle)**
+
+1. Inherit from the `Vehicle` class
+2. Add an additional attribute:
+
+   * `seats`
+3. Create a method named `seating_capacity()` that:
+
+   * returns the number of seats in the car
+
+---
+
+### **Bike (Subclass of Vehicle)**
+
+1. Inherit from the `Vehicle` class
+2. Add an additional attribute:
+
+   * `engine_cc`
+3. Create a method named `engine_details()` that:
+
+   * returns the engine capacity of the bike in cc
+
+---
+
+### **Tasks to Complete:**
+
+1. Create one object of `Car`
+2. Create one object of `Bike`
+3. Call:
+
+   * `seating_capacity()` using the `Car` object
+   * `engine_details()` using the `Bike` object
+4. Print the returned values
+
+---
+
+### **Expected Learning Outcome:**
+
+* Understand how subclasses can add their own attributes
+* Learn that child classes can have methods not present in the parent class
+* Practice clean inheritance without code duplication

@@ -1,0 +1,115 @@
+## 🧩 **Problem 1: Student Record System (Beginner → Intermediate)**
+
+### 🧠 **Real-World Scenario**
+
+You are building a simple **student record system** for a school.
+Each student has personal and academic information that must be **protected** and **validated**.
+
+---
+
+### 🎯 **Your Task**
+
+Create a Python class called **`Student`** using Object-Oriented Programming.
+
+---
+
+### 🔒 **Private Attributes (Must Use `__`)**
+
+The class should have **at least 3 private attributes**:
+
+1. `__name`
+2. `__roll_number`
+3. `__marks`
+
+---
+
+### 🧱 **Constructor (`__init__`) Requirements**
+
+* Initialize all private attributes using setter methods (❗important)
+* Do **not** assign values directly to private attributes inside `__init__`
+
+---
+
+### 🔍 **Getter & Setter Requirements**
+
+#### 1️⃣ `__name`
+
+* **Getter**: returns the student name
+* **Setter validation rules**:
+
+  * Name must not be empty
+  * Name must be a string
+  * Name must contain at least **3 characters**
+
+---
+
+#### 2️⃣ `__roll_number`
+
+* **Getter**: returns the roll number
+* **Setter validation rules**:
+
+  * Must be an integer
+  * Must be between **1 and 1000**
+
+---
+
+#### 3️⃣ `__marks`
+
+* **Getter**: returns marks
+* **Setter validation rules**:
+
+  * Must be a number (`int` or `float`)
+  * Must be between **0 and 100**
+  * Negative values are not allowed
+
+---
+
+### 🛑 **Error Handling Rules**
+
+* If validation fails:
+
+  * Raise a `ValueError`
+  * Use a **clear error message**
+
+---
+
+### 🧪 **Usage Requirement**
+
+After creating the class:
+
+* Create at least **one student object**
+* Try setting **valid and invalid values**
+* Print values using **getter methods only**
+
+---
+
+### ⚠️ **Important Rules**
+
+❌ Do NOT:
+
+* Access private variables directly
+* Skip validation
+* Print inside setters (use exceptions instead)
+
+✅ Must:
+
+* Use proper encapsulation
+* Follow clean naming conventions
+* Keep code readable
+
+---
+
+### 📌 **What This Problem Tests**
+
+* Understanding of **private attributes**
+* Correct use of **getters and setters**
+* Input validation logic
+* Clean OOP design
+
+---
+
+What mistakes i have done while writting the code:
+mistakes no1:
+self.set_roll(name).Wrong setter called in __init__.
+Mistake 2: stripe() typo [strip()]
+Mistake 3: Incorrect string type check

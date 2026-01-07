@@ -1,0 +1,118 @@
+## 🧩 Problem 2: Bank Account Management System (Intermediate)
+
+### 🧠 Real-World Scenario
+
+You are designing a **bank account management system**.
+Each bank account stores sensitive customer data, so **encapsulation and validation** are mandatory.
+
+---
+
+### 🎯 Your Task
+
+Create a Python class named **`BankAccount`** using Object-Oriented Programming principles.
+
+---
+
+### 🔒 Private Attributes (Must use double underscore `__`)
+
+The class must contain **at least 3 private attributes**:
+
+1. `__account_holder_name`
+2. `__account_number`
+3. `__balance`
+
+---
+
+### 🧱 Constructor (`__init__`) Requirements
+
+* Accept all three values as parameters
+* Initialize attributes **only via setter methods**
+* Do **not** assign directly to private attributes
+
+---
+
+### 🔍 Getter and Setter Requirements
+
+#### 1️⃣ Account Holder Name
+
+**Getter**
+
+* Returns the account holder name
+
+**Setter validation rules**
+
+* Must be a string
+* Cannot be empty
+* Must contain **at least 3 characters**
+
+---
+
+#### 2️⃣ Account Number
+
+**Getter**
+
+* Returns the account number
+
+**Setter validation rules**
+
+* Must be an integer
+* Must be **exactly 10 digits**
+* Cannot be negative
+
+---
+
+#### 3️⃣ Balance
+
+**Getter**
+
+* Returns the balance
+
+**Setter validation rules**
+
+* Must be a number (`int` or `float`)
+* Cannot be negative
+* Initial balance must be **at least 1000**
+
+---
+
+### 🛑 Error Handling Rules
+
+* Raise `ValueError` for any invalid input
+* Use clear, meaningful error messages
+* Do not print errors inside setters
+
+---
+
+### 🧪 Usage Requirements
+
+After defining the class:
+
+* Create at least **one valid account**
+* Attempt to set **invalid values** to test validation
+* Access values **only using getters**
+
+---
+
+### ⚠️ Constraints
+
+❌ Do NOT:
+
+* Access private attributes directly
+* Skip validation
+* Print inside setters
+
+✅ Must:
+
+* Follow proper encapsulation
+* Use clean and readable code
+* Apply validation logic consistently
+
+---
+
+### 🧠 What This Problem Tests
+
+* Strong understanding of encapsulation
+* Proper use of getters and setters
+* Real-world input validation
+* Defensive programming mindset
+

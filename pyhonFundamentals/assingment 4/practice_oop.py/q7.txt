@@ -1,0 +1,73 @@
+### **Problem 2: Employee Salary Calculation (Function Overriding)**
+
+**Concept:** Function Overriding
+
+---
+
+#### **Scenario**
+
+A company employs different types of workers.
+Each type of employee calculates their salary in a different way.
+You need to design a system using **function overriding** to handle this.
+
+---
+
+#### **Task**
+
+1. Create a base class named **`Employee`**.
+
+2. Inside the `Employee` class, define a method called **`calculate_salary()`**.
+
+   * This method should return `0`.
+   * It acts as a default placeholder.
+
+3. Create the following subclasses that **override** the `calculate_salary()` method:
+
+   * **`FullTimeEmployee`**
+   * **`PartTimeEmployee`**
+   * **`Intern`**
+
+---
+
+#### **Salary Calculation Rules**
+
+* **FullTimeEmployee**
+
+  * Salary is a fixed monthly amount.
+
+* **PartTimeEmployee**
+
+  * Salary = hourly_rate × hours_worked
+
+* **Intern**
+
+  * Salary is a fixed stipend.
+
+---
+
+#### **Requirements**
+
+* The method name **`calculate_salary()`** must be the same in all classes.
+* Each subclass must provide its **own implementation** of `calculate_salary()`.
+* Use constructors (`__init__`) to initialize required values.
+* Demonstrate **polymorphism** by:
+
+  * Storing different employee objects in a list
+  * Calling `calculate_salary()` in a loop 
+
+---
+
+#### **Rules**
+
+* Do NOT write salary logic in the base class.
+* Do NOT change the method name in subclasses.
+* Focus on overriding, not conditional logic (`if/else`).
+
+---
+
+#### **Expected Learning Outcome**
+
+* Understand function overriding
+* Understand runtime polymorphism
+* Learn how the same method behaves differently for different objects
+

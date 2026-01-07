@@ -1,0 +1,53 @@
+### **Problem 2 — Method Reuse + Extension (Inheritance)**
+
+**Concept:** Inheritance and Method Overriding
+
+**Problem Statement:**
+
+Create a base class named `Vehicle` with the following:
+
+1. Attributes:
+
+   * `brand`
+   * `model`
+
+2. A method named `get_type()` that returns the string:
+
+   ```
+   "Generic Vehicle"
+   ```
+
+Then create two subclasses:
+
+### **Car (Subclass of Vehicle)**
+
+1. Inherit from the `Vehicle` class
+2. Override the `get_type()` method so that it returns:
+
+   ```
+   "Car"
+   ```
+
+### **Bike (Subclass of Vehicle)**
+
+1. Inherit from the `Vehicle` class
+2. Override the `get_type()` method so that it returns:
+
+   ```
+   "Bike"
+   ```
+
+### **Tasks to Complete:**
+
+1. Create one object of `Car`
+2. Create one object of `Bike`
+3. Call the `get_type()` method for both objects
+4. Print the returned values
+
+**Expected Learning Outcome:**
+
+* Understand how child classes reuse methods from a parent class
+* Learn how to override a parent class method in subclasses
+* Observe different outputs from the same method name using inheritance
+
+
