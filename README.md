@@ -1,5 +1,6 @@
 # Python_practice
 Python Practice  This repository contains my Python practice code covering:
+
 i.Concepts : Output/ Input, Variables, Data Types & Operators
 [assingment 1]
 
