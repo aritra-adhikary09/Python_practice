@@ -1,0 +1,135 @@
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.is_borrowed = False
+    
+    def mark_borrowed(self):
+        if not self.is_borrowed:
+            self.is_borrowed = True
+            print(f"'{self.title}' has been borrowed.")
+        else:
+            print(f"'{self.title}' is already borrowed.")
+    
+    def mark_returned(self):
+        if self.is_borrowed:
+            self.is_borrowed = False
+            print(f"'{self.title}' has been returned.")
+        else:
+            print(f"'{self.title}' was not borrowed.")
+
+
+class Member:
+    def __init__(self, name):
+        self.name = name
+        self.borrowed_books = []
+
+    def borrow_book(self, book, library):
+        if book in self.borrowed_books:
+            print(f"{self.name} already borrowed '{book.title}'.")
+            return
+        
+        if library.lend_book(book, self):
+            self.borrowed_books.append(book)
+
+
+class Library:
+    def __init__(self):
+        self.books = []
+        self.members = [] 
+
+    def add_book(self, book):
+        if book in self.books:
+            print(f"'{book.title}' is already in the library.")
+        else:
+            self.books.append(book)
+
+    def register_member(self, member):
+        if member in self.members:
+            print(f"{member.name} already has a membership.")
+        else:
+            self.members.append(member)
+
+    def lend_book(self, book, member):
+        if member not in self.members:
+            print(f"{member.name} is not registered.")
+            return False
+        
+        if book not in self.books:
+            print(f"'{book.title}' is not available in the library.")
+            return False
+        
+        if book.is_borrowed:
+            print(f"'{book.title}' is already borrowed.")
+            return False 
+        
+        book.mark_borrowed()
+        return True
+    
+    def receive_book(self, book, member):
+        if member not in self.members:
+            print(f"{member.name} is not registered.")
+            return False
+        
+        if book not in member.borrowed_books:
+            print(f"{member.name} did not borrow '{book.title}'.")
+            return False
+        
+        if not book.is_borrowed:
+            print(f"'{book.title}' is not marked as borrowed.")
+            return False
+
+        book.mark_returned()
+        member.borrowed_books.remove(book)
+        return True
+    
+    def show_available_books(self):
+        return [book for book in self.books if not book.is_borrowed]
+
+
+# -------------------------------
+# Example Usage / Testing
+# -------------------------------
+if __name__ == "__main__":
+
+    # Create library
+    library = Library()
+
+    # Create books
+    book1 = Book("Python Basics", "Guido")
+    book2 = Book("Data Science 101", "Andrew")
+    book3 = Book("AI Fundamentals", "Yann")
+
+    # Add books to library
+    library.add_book(book1)
+    library.add_book(book2)
+    library.add_book(book3)
+
+    # Create members
+    member1 = Member("Aritra")
+    member2 = Member("Rohan")
+
+    # Register members
+    library.register_member(member1)
+    library.register_member(member2)
+
+    # Borrow books
+    member1.borrow_book(book1, library)
+    member2.borrow_book(book2, library)
+
+    # Try borrowing already borrowed book
+    member2.borrow_book(book1, library)
+
+    # Show available books
+    print("\nAvailable books:")
+    for book in library.show_available_books():
+        print(book.title)
+
+    # Return a book
+    library.receive_book(book1, member1)
+
+    # Show available books again
+    print("\nAvailable books after return:")
+    for book in library.show_available_books():
+        print(book.title)
+

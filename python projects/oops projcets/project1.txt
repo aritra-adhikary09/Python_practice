@@ -1,0 +1,67 @@
+Concept: Object-Oriented Programming (OOP)
+
+Q1. Mini Project – OOP Library Management System
+
+Create a Library Management System using Object-Oriented Programming concepts.
+
+You must create the following classes:
+
+1. Book
+2. Member
+3. Library
+
+The system should support the following functionalities:
+- Adding books to the library
+- Registering members
+- Borrowing books
+- Returning books
+- Viewing available books
+
+--------------------------------------------------
+Class 1: Book
+--------------------------------------------------
+Attributes:
+- title
+- author
+- is_borrowed (boolean)
+
+Methods:
+- mark_borrowed()
+- mark_returned()
+
+--------------------------------------------------
+Class 2: Member
+--------------------------------------------------
+Attributes:
+- name
+- borrowed_books (list)
+
+Methods:
+- borrow_book(book, library)
+- return_book(book, library)
+
+--------------------------------------------------
+Class 3: Library
+--------------------------------------------------
+Attributes:
+- books (list)
+- members (list)
+
+Methods:
+- add_book(book)
+- register_member(member)
+- lend_book(book, member)
+- receive_book(book, member)
+- show_available_books()
+
+--------------------------------------------------
+Rules / Constraints:
+- A book cannot be borrowed if it is already borrowed.
+- A member cannot borrow the same book twice.
+- Only registered members can borrow books.
+- Returning a book should make it available again.
+
+--------------------------------------------------
+Task:
+Implement the above system using Python OOP.
+Create objects and demonstrate all functionalities in a main block.
